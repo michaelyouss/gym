@@ -152,6 +152,12 @@ img {
     overflow: hidden;
     /*for anmation scrollReveal*/
 }
+.color-red{
+    color:red;
+}
+.color-gren{
+    color: var(--first-color);
+}
 
 /* ================ HEDER & NAV ================= */
 header {
@@ -603,4 +609,63 @@ margin-bottom: 2rem;
 .pricing-card-acive .pricing-number,
 .pricing-card-acive .pricing-item{
     color: var(--titel-color-black);
+}
+/* =========calculate ========= */
+.calculate{
+    padding-bottom: 0 ;
+}
+.calculate-container {
+    row-gap: 4rem;
+}
+.calculate-content .section__titel{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+ .calculate-description{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.calculate-form{
+    display: grid;
+    row-gap: 1rem;
+}
+.calculate-box{
+    position: relative;
+    border: 2px solid var(--first-color-light);
+}
+.calculate-input{
+    width: 100%;
+    background: transparent;
+    padding: 20px 56px 20px 24px;
+    outline: none;
+    border: none;
+    color: var(--text-color);
+}
+.calculate-input::placeholder{
+    color: white;
+}
+.calculate-input::-webkit-outer-spin-button,
+.calculate-input::-webkit-inner-spin-button{
+-webkit-appearance:none;
+margin: 0;
+}
+.calculate-input[type = number]{
+    -moz-appearance: textfield;
+}
+.calculate-lapel{
+    position: absolute;
+    right: 1.5rem;
+    top: 1.25rem;
+    color: var(--titel-color);
+}
+.calculate-form .button{
+ margin-top: 1.5rem;   
+}
+.calculate-img{
+    justify-content: center;
+}
+.calculate-message{
+    position: relative;
+    transform: translateY(1rem);
+    bottom: 90px;
 }
