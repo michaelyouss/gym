@@ -310,9 +310,9 @@ header {
     margin-bottom: 2.5rem;
 }
 .home-triangle {
-    /* height: 450px;
-    position: absolute; */
-    right: 0;
+    height: 450px;
+    position: absolute; 
+    right: 0; 
     bottom: 0;
     clip-path: polygon(100% 0 , 0 100%, 100% 100%);
 }
@@ -576,8 +576,12 @@ margin-bottom: 2rem;
 .pricing-button{
     width: 100%;
     margin: auto;
+    font-size: 10px;
     background-color: var(--titel-color);
     transition: background .6s, color .7s;
+}
+.pricing-button i{
+    font-size: 15px;
 }
 .pricing-card-acive .pricing-button:hover{
   background-color: var(--titel-color-black); 
