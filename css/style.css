@@ -310,14 +310,14 @@ header {
     margin-bottom: 2.5rem;
 }
 .home-triangle {
-    height: 600px;
+    height: 450px;
     position: absolute;
     right: 0;
     bottom: 0;
     clip-path: polygon(100% 0 , 0 100%, 100% 100%);
 }
 .home-triangle-1{
-    width: 805px;
+    width: 705px;
     background-color: var(--first-color);
 } 
 .home-triangle-2{
