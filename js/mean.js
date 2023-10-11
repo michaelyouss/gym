@@ -89,3 +89,38 @@ calculateForm.addEventListener('submit',calculateBmi)
 
 
 // ============================== footer
+// ============================== meail js
+const contactForm = document.getElementById('contact-form');
+const contactMassage = document.getElementById('contact-massage');
+const contactUser = document.getElementById('contact-user');
+
+const sendEmail = (e)=>{
+    e.preventDefault()
+    // Check if the field has a value
+
+    if(contactUser.value === ''){
+        // add and remove color
+        contactMassage.classList.remove('color-green')
+        contactMassage.classList.add('color-red')
+
+        contactMassage.textContent ='you must enter your email 👆'
+        // Remove message three seconds
+        setTimeout(()=>{
+            contactMassage.textContent =''
+        }, 3000)
+
+    }else{
+       emailjs.sendForm('service_swcqq3u','template_u4xduyj','#contact-form','kCTLtdsh_08jL8HMg')
+        .then(()=>{
+// Show message and add color
+contactMassage.classList.add('color-green')
+contactMassage.textContent= ' You registered successfully 💪'
+setTimeout(()=>{
+    contactMassage.textContent =''
+}, 3000)
+
+        })
+    }
+}
+
+contactForm.addEventListener('submit', sendEmail)
