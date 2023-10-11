@@ -83,14 +83,9 @@ calculateMessage.innerHTML = `your BML is ${bmi} and you are skinny 😢`
     calculateCm.value=''
     calculateKg.value=''
 // Remove message four secound
-
-   
-   
     }
-  
 }
-
 calculateForm.addEventListener('submit',calculateBmi)
 
 
-// console.log(calculateMessage);
+// ============================== footer
