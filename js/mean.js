@@ -52,9 +52,7 @@ calculateMessage.innerHTML = "Fill in the height and width 🤦‍♂️"
 setTimeout(()=>{
     calculateMessage.innerHTML = ""
 },1000)
-// add and remov color
 
-// calculateMessage.classList.remove("color-gren")
 calculateMessage.classList.add("color-red")
 }else{
    
@@ -87,6 +85,33 @@ calculateMessage.innerHTML = `your BML is ${bmi} and you are skinny 😢`
 }
 calculateForm.addEventListener('submit',calculateBmi)
 
+//  =============== SCROLL SECTIONS ACTIVE LINK ===============
+
+const section = document.querySelectorAll('section[id]')
+
+const scrollActive = ()=>{
+    const scrolly = window.scrollY
+    section.forEach(current =>{
+        const sectionHeight = current.offsetHeight,
+         sectionTop = current.offsetTop - 58,
+         sectionId = current.getAttribute('id'),
+         sectionClass = document.querySelector('.nav__menu a[href*=' + sectionId)
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            sectionClass.classList.add('active-link')
+        }else{
+        
+            sectionClass.classList.remove('active-link')
+        }
+
+    })
+}
+
+window.addEventListener('scroll', scrollActive)
+
+
+
+
 
 // ============================== footer
 // ============================== meail js
@@ -113,13 +138,20 @@ const sendEmail = (e)=>{
        emailjs.sendForm('service_swcqq3u','template_u4xduyj','#contact-form','kCTLtdsh_08jL8HMg')
         .then(()=>{
 // Show message and add color
-contactMassage.classList.add('color-green')
+contactMassage.classList.add('color-white')
 contactMassage.textContent= ' You registered successfully 💪'
+
 setTimeout(()=>{
     contactMassage.textContent =''
 }, 3000)
 
+        },
+        (eroor)=>{
+// mail sending error
+alert('OOPS! SOMETHING HAS FAILED ...', error)
         })
+        // To cler the input field
+        contactUser.value =''
     }
 }
 
