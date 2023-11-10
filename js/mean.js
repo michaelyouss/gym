@@ -109,6 +109,20 @@ const scrollActive = ()=>{
 
 window.addEventListener('scroll', scrollActive)
 
+// ================== SHIW SCROLL UP 
+
+const scrollUp = () =>{
+    const scrollUp = document.getElementById('scroll-up');
+// console.log(scrollUp);
+
+    this.scrollY >= 300 ?scrollUp.classList.add('show') 
+    
+                        :scrollUp.classList.remove('show') 
+
+
+     window.addEventListener('scroll', scrollUp)                   
+}
+
 
 
 

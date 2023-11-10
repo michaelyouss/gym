@@ -169,26 +169,28 @@ img {
 
 /*  ====== Active link ======= */
 .active-link {
-    color: var(--first-color)!important;
+    color: var(--first-color) !important;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: .6rem;
     border-radius: .5rem;
     background-color: hsl(79, 4%, 15%);
 }
-::-webkit-scrollbar-thumb{
-    background-color: hsl(79, 4%, 25%) ;
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(79, 4%, 25%);
     border-radius: .5rem;
 }
-::-webkit-scrollbar-thumb:hover{
-    background-color: hsl(79, 4%, 35%) ;
-   
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(79, 4%, 35%);
+
 }
 
 /* ================ HEDER & NAV ================= */
 header {
-    width: 100% ;
+    width: 100%;
     background-color: transparent;
     position: fixed;
     top: 0;
@@ -744,9 +746,13 @@ header {
     margin: 0;
 }
 
-.calculate-input[type=number] {
+/* ==========================================
+=======================================
+=
+ */
+/* .calculate-input[type=number] {
     -moz-appearance: textfield;
-}
+} */
 
 .calculate-lapel {
     position: absolute;
@@ -891,19 +897,68 @@ header {
 }
 
 /* ========== scrollUp ========= */
-.scrollUp{
+.scrollUp {
     position: fixed;
     right: 1rem;
-
-    bottom: 3rem;
+    bottom: -4%;
     background-color: var(--first-color);
     display: inline-flex;
-    padding: .45rem;
-color: var(--titel-color-black);
-font-size: 1.25rem;
-z-index: var(--z-tooltip);
-transition: .3s;
+    padding: .35rem;
+    color: var(--titel-color-black);
+    font-size: 1.25rem;
+    z-index: var(--z-tooltip);
+    transition: .3s;
 }
-.scrollUp:hover{
+
+.scrollUp:hover {
     transform: translateY(-.25rem);
+}
+
+
+/* Show scroll Up */
+.show {
+    bottom: 3rem;
+}
+
+
+/* for small devices */
+
+@media screen and (max-width:340px) {
+    .container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .section__titel {
+        flex-direction: column;
+        row-gap: .25rem;
+    }
+
+    .home-triangle,
+    .choose-triangle  {
+        height: 255px;
+    }
+
+    .home-triangle-3,
+    .choose-triangle-1 {
+        width: 300px;
+    }
+
+    .choose-imgs{
+        width: 195px;
+    }
+    .pricing-container{
+        grid-template-columns: 250px;
+    }
+    .pricing-crad{
+        padding: 1.5rem;
+    }
+    .footer-content{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* for medium devices */
+@media screen and (min-width: 768px){
+
 }
