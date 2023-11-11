@@ -65,17 +65,19 @@ const cm = calculateCm.value / 100
        kg = calculateKg.value,
        bmi =Math.round(kg /(cm * cm))
     //    show your health status
-    if(bmi < 15){
+    if(bmi < 19){
 // add color and display message
-calculateMessage.innerHTML = `your BML is ${bmi} and you are skinny 😢`
+calculateMessage.innerHTML = `your BMI is ${bmi} and you are skinny 😢`
     }else if(bmi <25){
-        calculateMessage.innerHTML = `your BML is ${bmi} and you are healthy 🥰`
+        calculateMessage.innerHTML = `your BMI is ${bmi} and you are healthy 🥰`
     }else if(bmi < 30){
-        calculateMessage.innerHTML = `your BML is ${bmi} and you are obese 😯`
+        calculateMessage.innerHTML = `your BMI is ${bmi} and you are over weigth 😯`
+    }else if(bmi < 35){
+        calculateMessage.innerHTML = `your BMI is ${bmi} and you are Obese 😱`
     }else if(bmi < 40){
-        calculateMessage.innerHTML = `your BML is ${bmi} and you are Extremely Obese 😱`
+        calculateMessage.innerHTML = `your BMI is ${bmi} and you are Extremely Obese 😱`
     }else{
-        calculateMessage.innerHTML = `your BML is ${bmi} and you are Extremely Obese 😱`
+        calculateMessage.innerHTML = `your BMI is ${bmi} and you are Extremely Obese 😱`
     }
     // To clear the input filed
     calculateCm.value=''
