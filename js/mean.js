@@ -170,3 +170,27 @@ alert('OOPS! SOMETHING HAS FAILED ...', error)
 }
 
 contactForm.addEventListener('submit', sendEmail)
+
+
+// Scroll REVEAL ANMATION
+
+const sr = ScrollReveal({
+    origin:'top',
+    distance:'60px',
+    duration:2500,
+    dalay: 400,
+
+})
+
+sr.reveal(`.home-data,.footer-container,.footer-content  `)
+sr.reveal(`.home-img`,{dalay:700, origin:'bottom'})
+sr.reveal(`.home-img`,{dalay:700, origin:'bottom'})
+sr.reveal(`.logos-img, .program-card, .pricing-crad `,{interval:100})
+
+sr.reveal(`.choose-img,.calculate-content`,{origin:'left'})
+
+sr.reveal(`.choose-container,.calculate-img `,{origin:'right'})
+sr.reveal(`.section__data, .choose-description,.section__titel, .calculate-description `,{origin:'top'})
+sr.reveal(`.footer-grop `,{origin:'bottom'})
+
+
